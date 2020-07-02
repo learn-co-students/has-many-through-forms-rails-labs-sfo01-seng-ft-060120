@@ -1,1 +1,5 @@
+<h3><%= "#{@user.username}'s Posts'" %></h3>
 
+<% @user.comments.each do |c| %>
+    <%= link_to c.post.title, post_path(c.post) %>
+<% end %>
